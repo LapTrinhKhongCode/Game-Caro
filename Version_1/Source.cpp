@@ -1206,6 +1206,8 @@ void XuLyGameTheoHuongDungPhim(char a[MAX][MAX], stack<TOADO> &stack_undo, stack
 	cout << (KichHoatCheDoChan2DauLaKhongChoThang == true ? "Khong" : "Co"); 
 	textcolor(7);
 
+
+
 	string NoiDungThongBaoThoiGianConLai;
 	int DoDaiNoiDungThongBaoThoiGianConLai = 0;
 	int dem_Sleep = 0; // Mục đích để đếm số lần Sleep xảy ra đạt bao nhiêu lần thì mới giảm đi 1 giây (vd: Nếu để Sleep(250) thì 4 lần như vậy thì mới giảm 1 giây)
@@ -1237,6 +1239,18 @@ void XuLyGameTheoHuongDungPhim(char a[MAX][MAX], stack<TOADO> &stack_undo, stack
 		textcolor(12);
 		cout << (KichHoatCheDoTinhTongThoiGianDeDanhRaCoCuaMoiNguoiChoi == true ? "Co" : "Khong");
 		textcolor(7);
+
+		gotoxy((doronggiua2cot + 1) * (DanhTheoDuongGiaoDiemDongCot == false ? socot : socot - 1) + vitriXbandau + 1, vitriYbandau + 5);
+		textcolor(12);
+		cout << "Player 1: Su dung cac phim WASD de di chuyen, SPACE de danh";
+		textcolor(7);
+
+
+		gotoxy((doronggiua2cot + 1)* (DanhTheoDuongGiaoDiemDongCot == false ? socot : socot - 1) + vitriXbandau + 1, vitriYbandau + 6);
+		textcolor(12);
+		cout << "Player 2: Su dung cac phim MUI TEN de di chuyen, Enter de danh";
+		textcolor(7);
+
 	}
 
 	//int vitrixbandaucuabanco = 1, vitriybandaucuabanco = 1; // vị trí ban đầu của góc trên cùng bên trái của bàn cờ
